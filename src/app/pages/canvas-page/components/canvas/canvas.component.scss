@@ -1,0 +1,28 @@
+:host {
+  display: block;
+  width: 100%;
+}
+
+div {
+  display: flex;
+  gap: 10px;
+
+  canvas {
+    background-color: #41789c;
+    border-radius: 7px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  }
+
+  button {
+    align-self: flex-end;
+  }
+
+  div {
+    display: flex;
+    flex-direction: column;
+
+    button {
+      align-self: flex-start;
+    }
+  }
+}

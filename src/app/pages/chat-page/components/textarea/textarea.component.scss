@@ -1,0 +1,32 @@
+:host {
+  width: 100%;
+  display: block;
+  height: 100%;
+}
+
+main {
+  padding: 1em;
+  display: flex;
+  gap: 1em;
+
+  textarea {
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 60%;
+    height: 350px;
+    resize: vertical;
+    background-color: #3e5f7d;
+    color: #fff;
+    padding: 1%;
+  }
+}
+
+.code {
+  font-size: 16px;
+  font-family: 'Courier New', monospace;
+}
+
+.keyword {
+  color: #ff69b4;
+}

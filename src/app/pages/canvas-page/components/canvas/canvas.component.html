@@ -1,0 +1,22 @@
+<div>
+  <div>
+    <button
+      *ngFor="let colorData of colors"
+      mat-raised-button
+      color="primary"
+      (click)="changeColor(colorData.color)"
+    >
+      {{ colorData.label }}
+    </button>
+  </div>
+
+  <canvas #canvasTag></canvas>
+
+  <button
+    mat-raised-button
+    color="accent"
+    (click)="clearCanvas()"
+  >
+    Clear
+  </button>
+</div>
