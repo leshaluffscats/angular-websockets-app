@@ -73,10 +73,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "ws-draw-fe:build:production"
+              "buildTarget": "ws-draw-fe:build:production"
             },
             "development": {
-              "browserTarget": "ws-draw-fe:build:development"
+              "buildTarget": "ws-draw-fe:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -84,7 +84,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "ws-draw-fe:build"
+            "buildTarget": "ws-draw-fe:build"
           }
         },
         "test": {
