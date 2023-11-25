@@ -19,3 +19,8 @@ export const CHAT_PATH: IRoute = {
   path: 'chat',
   fullPath: '/chat',
 };
+
+export const MAP_PATH: IRoute = {
+  path: 'map',
+  fullPath: '/map',
+};
