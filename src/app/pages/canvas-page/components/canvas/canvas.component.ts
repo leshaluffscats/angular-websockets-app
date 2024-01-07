@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, ElementRef, Input, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
 import { fromEvent, pairwise, switchMap, takeUntil } from 'rxjs';
 import { MatButtonModule } from '@angular/material/button';
 import { colors } from '../consts/canvas.consts';
@@ -11,7 +11,7 @@ import { colors } from '../consts/canvas.consts';
   templateUrl: './canvas.component.html',
   styleUrls: ['./canvas.component.scss'],
 })
-export class CanvasComponent {
+export class CanvasComponent implements AfterViewInit{
   @ViewChild('canvasTag') public canvas!: ElementRef;
 
   public colors: { color: string; label: string }[] = colors;
@@ -45,7 +45,7 @@ export class CanvasComponent {
   private captureEvents(canvasEl: HTMLCanvasElement) {
     fromEvent<MouseEvent>(canvasEl, 'mousedown')
       .pipe(
-        switchMap(e => {
+        switchMap(() => {
           return fromEvent<MouseEvent>(canvasEl, 'mousemove').pipe(
             takeUntil(fromEvent(canvasEl, 'mouseup')),
             takeUntil(fromEvent(canvasEl, 'mouseleave')),
